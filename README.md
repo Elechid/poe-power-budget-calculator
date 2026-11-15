@@ -1,5 +1,9 @@
 # PoE power budget calculator｜PoE 供電預算計算器
 
+由 [Elechid 音立](https://elechid.com/) 製作及維護。
+
+Created and maintained by [Elechid 音立](https://elechid.com/en/).
+
 [English](https://elechid.github.io/poe-power-budget-calculator/) · [繁體中文](https://elechid.github.io/poe-power-budget-calculator/?lang=zh)
 
 Example: four 8 W and two 18 W cameras use 68 W, or 81.6 W with 20% reserve. Deduct power and ports already in use before entering the available budget.
