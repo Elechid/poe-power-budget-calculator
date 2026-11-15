@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="按以下例子，總供電足夠，還要有至少六個可用 PoE 口，而且每口都能供應對應鏡頭的最大耗電。">
+<title>PoE 供電預算計算器 | Elechid 音立</title>
+<style>
+:root { color: #152624; background: #edf4ef; font: 16px/1.55 system-ui,sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 60rem; margin: auto; padding: clamp(1rem,5vw,3.5rem); }
+header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+h1 { font-size: clamp(2rem,6vw,3.5rem); line-height: 1.08; letter-spacing: -.03em; margin-bottom: .4em; }
+p { max-width: 66ch; }
+form, .results { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,13rem),1fr)); gap: .8rem; margin-block: 1.5rem; }
+label, .results div { display: block; padding: .9rem 1rem; background: #fff; border: 1px solid #bbcfc4; border-radius: .75rem; }
+label { font-weight: 600; }
+input, button { font: inherit; color: inherit; border: 1px solid #58766a; border-radius: .4rem; background: #fff; padding: .45rem .65rem; }
+input { display: block; margin-top: .4rem; width: 100%; }
+button { cursor: pointer; }
+a { color: #075238; text-underline-offset: .17em; }
+output { display: block; font-size: 1.7rem; font-weight: 750; overflow-wrap: anywhere; }
+#error { color: #a42125; }
+
+nav { display:flex; flex-wrap:wrap; gap:.5rem 1rem; margin-top:1rem; }
+nav a[aria-current] { font-weight:750; }
+output { font-size:1.35rem; }
+textarea { width:100%; min-height:13rem; padding:.75rem; font:inherit; }
+form:empty,.results:empty { display:none; }
+</style>
+<script type="module" src="./app.mjs"></script>
+<link rel="canonical" href="https://elechid.github.io/poe-power-budget-calculator/zh.html">
+<link rel="alternate" hreflang="en" href="https://elechid.github.io/poe-power-budget-calculator/">
+<link rel="alternate" hreflang="zh-Hant" href="https://elechid.github.io/poe-power-budget-calculator/zh.html">
+<style>html[lang=en] [data-locale=zh-Hant],html[lang=zh-Hant] [data-locale=en]{display:none}.tool-answer{margin-block:1.4rem;padding:1rem;background:white;border:1px solid #bbcfc4;border-radius:.75rem}.tool-answer h2{margin-top:0}</style>
+</head>
+<body><main>
+<header><a id="brand" href="https://elechid.com/">Elechid 音立</a><button type="button" id="language" lang="en">English</button></header>
+<h1 id="title">PoE 供電預算計算器</h1>
+<p id="intro"></p>
+<form></form>
+<p id="error" role="status" hidden></p>
+<section class="results" aria-live="polite"></section>
+<section id="checklist" hidden>
+<label id="list-label" for="measurements">Measurement record</label>
+<textarea id="measurements" readonly></textarea>
+<button id="copy" type="button">Copy checklist</button>
+<p id="copy-status" role="status"></p>
+</section>
+<p id="note"></p>
+<section class="tool-answer" data-locale="zh-Hant" aria-labelledby="answer"><h2 id="answer">120 W PoE 交換器夠唔夠供電畀兩組 CCTV 鏡頭？</h2><p>按以下例子，總供電足夠，還要有至少六個可用 PoE 口，而且每口都能供應對應鏡頭的最大耗電。</p><p><strong>例子</strong> 4 部 8 W 加 2 部 18 W，合計 68 W。加 20% 預留後需要 81.6 W，120 W 交換器剩 38.4 W。15 W 單口仍不足以應付 18 W 鏡頭的額定最大耗電。</p><p><strong>適用限制</strong> 按原廠最大耗電計算，適用時包括紅外線、加熱器或 PTZ。另要核對 PoE 標準、線材損耗和其他裝置的耗電。</p></section><section class="tool-answer" data-locale="en"><h2>Is a 120 W PoE switch enough for mixed CCTV cameras?</h2><p>It is enough for the example below if at least six PoE ports are free and each port meets its camera’s maximum draw.</p><p><strong>Worked example</strong> Four 8 W cameras plus two 18 W cameras draw 68 W. With 20% reserve, budget 81.6 W, leaving 38.4 W on a 120 W switch. A 15 W port still cannot supply an 18 W camera at its rated maximum.</p><p><strong>Limits</strong> Use the manufacturer’s maximum power draw with infrared, heating or PTZ where applicable. Check PoE standards and account for cable losses and other devices.</p></section>
+<noscript>JavaScript is required. 此工具需要 JavaScript。</noscript>
+<p><a id="guide" href="https://elechid.com/blogs/news/poe-camera-nvr-system-planning-hong-kong">閱讀 Elechid 選購及安裝指南</a> · <a id="source" href="https://github.com/Elechid/poe-power-budget-calculator">Source code</a></p>
+<nav aria-label="Language"><a href="./" hreflang="en" lang="en">English</a><a href="./zh.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></nav>
+</main></body></html>

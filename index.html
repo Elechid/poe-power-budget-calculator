@@ -30,6 +30,10 @@ textarea { width:100%; min-height:13rem; padding:.75rem; font:inherit; }
 form:empty,.results:empty { display:none; }
 </style>
 <script type="module" src="./app.mjs"></script>
+<link rel="canonical" href="https://elechid.github.io/poe-power-budget-calculator/">
+<link rel="alternate" hreflang="en" href="https://elechid.github.io/poe-power-budget-calculator/">
+<link rel="alternate" hreflang="zh-Hant" href="https://elechid.github.io/poe-power-budget-calculator/zh.html">
+<style>html[lang=en] [data-locale=zh-Hant],html[lang=zh-Hant] [data-locale=en]{display:none}.tool-answer{margin-block:1.4rem;padding:1rem;background:white;border:1px solid #bbcfc4;border-radius:.75rem}.tool-answer h2{margin-top:0}</style>
 </head>
 <body><main>
 <header><a id="brand" href="https://elechid.com/en/">Elechid 音立</a><button type="button" id="language" lang="zh-Hant">繁體中文</button></header>
@@ -45,6 +49,8 @@ form:empty,.results:empty { display:none; }
 <p id="copy-status" role="status"></p>
 </section>
 <p id="note"></p>
+<section class="tool-answer" data-locale="en" aria-labelledby="answer"><h2 id="answer">Is a 120 W PoE switch enough for mixed CCTV cameras?</h2><p>It is enough for the example below if at least six PoE ports are free and each port meets its camera’s maximum draw.</p><p><strong>Worked example</strong> Four 8 W cameras plus two 18 W cameras draw 68 W. With 20% reserve, budget 81.6 W, leaving 38.4 W on a 120 W switch. A 15 W port still cannot supply an 18 W camera at its rated maximum.</p><p><strong>Limits</strong> Use the manufacturer’s maximum power draw with infrared, heating or PTZ where applicable. Check PoE standards and account for cable losses and other devices.</p></section><section class="tool-answer" data-locale="zh-Hant"><h2>120 W PoE 交換器夠唔夠供電畀兩組 CCTV 鏡頭？</h2><p>按以下例子，總供電足夠，還要有至少六個可用 PoE 口，而且每口都能供應對應鏡頭的最大耗電。</p><p><strong>例子</strong> 4 部 8 W 加 2 部 18 W，合計 68 W。加 20% 預留後需要 81.6 W，120 W 交換器剩 38.4 W。15 W 單口仍不足以應付 18 W 鏡頭的額定最大耗電。</p><p><strong>適用限制</strong> 按原廠最大耗電計算，適用時包括紅外線、加熱器或 PTZ。另要核對 PoE 標準、線材損耗和其他裝置的耗電。</p></section>
 <noscript>JavaScript is required. 此工具需要 JavaScript。</noscript>
 <p><a id="guide" href="https://elechid.com/en/blogs/news/poe-camera-nvr-system-planning-hong-kong">Read the Elechid guide</a> · <a id="source" href="https://github.com/Elechid/poe-power-budget-calculator">Source code</a></p>
+<nav aria-label="Language"><a href="./" hreflang="en" lang="en">English</a><a href="./zh.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></nav>
 </main></body></html>
